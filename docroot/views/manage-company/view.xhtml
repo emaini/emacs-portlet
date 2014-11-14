@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:rich="http://richfaces.org/rich">
+	<h:head />
+	<h:body>
+	<h:form prependId="false">
+		<div class="input-group">
+			<h:outputLabel value="#{i18n['manage-company-name-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.companyName}" styleClass="input-group"/><br/>
+		</div>
+		<div>
+		<br/>
+		</div>
+		<div class="input-group">
+		<h3  class="input-group"> <h:outputText value="#{i18n['manage-company-companydetails-header']}" styleClass="input-group"/></h3>
+			<h:outputLabel value="#{i18n['manage-company-currencysymbol-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.currency.symbol}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-maintain-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.maintain}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-financialyearfrom-label']}" styleClass="input-group"/>
+			<rich:calendar  id="financialYearFrom" value="#{manageCompanyMB.company.financialYearFrom}" styleClass="input-group"/><br/>
+			<h:outputLabel  value="#{i18n['manage-company-booksbeginfrom-label']}" styleClass="input-group"/>
+			<rich:calendar id="booksBeginFrom" value="#{manageCompanyMB.company.booksBeginFrom}" styleClass="input-group"/><br/>
+		</div>
+		<div>
+		<br/>
+		</div>
+		<div class="input-group">
+		<h3  class="input-group"> <h:outputText value="#{i18n['manage-company-mailingncontactdetails-header']}" styleClass="input-group"/></h3>
+			<h:outputLabel value="#{i18n['manage-company-mailingname-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.mailingName}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-address-label']}" styleClass="input-group"/>
+			<h:inputTextarea value="#{manageCompanyMB.company.address}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-statutorycompliance-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.statutoryCompliance}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-state-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.state}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-pincode-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.pincode}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-telephoneNumber-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.telephoneNumber}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-mobileNumber-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.mobileNumber}" styleClass="input-group"/><br/>
+			<h:outputLabel value="#{i18n['manage-company-email-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.company.email}" styleClass="input-group"/><br/>
+		</div>
+				<div>
+		<br/>
+		</div>
+		<div class="input-group">
+		<h3  class="input-group"> <h:outputText value="#{i18n['manage-company-basecurrencyinfo-header']}" styleClass="input-group"/></h3>
+			<h:outputLabel value="#{i18n['manage-company-currencyformalname-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.currency.formalName}" styleClass="input-group"/><br/>
+			
+			<h:outputLabel value="#{i18n['manage-company-currencynoofdecimalplaces-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.currency.noOfDecimalPlaces}" styleClass="input-group"/><br/>
+			
+			<h:outputLabel value="#{i18n['manage-company-currencysymbolsuffixedtoamounts-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.currency.symbolSuffixedToAmounts}" styleClass="input-group"/><br/>
+			
+			<h:outputLabel value="#{i18n['manage-company-currencysymbolfordecimalportion-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.currency.symbolForDecimalPortion}" styleClass="input-group"/><br/>
+			
+			<h:outputLabel value="#{i18n['manage-company-currencyshowamountsinmillions-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.currency.showAmountsInMillions}" styleClass="input-group"/><br/>
+			
+			<h:outputLabel value="#{i18n['manage-company-currencyspaceamountnsymbol-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.currency.spaceBetweenAmountNSymbol}" styleClass="input-group"/><br/>
+			
+			<h:outputLabel value="#{i18n['manage-company-currencydecimalplaceswords-label']}" styleClass="input-group"/>
+			<h:inputText value="#{manageCompanyMB.currency.noOfDecimalPlacesWords}" styleClass="input-group"/><br/>
+		</div>
+		<h:commandButton action="#{manageCompanyMB.saveDetails}" title="Save Details" value="Save Details"> </h:commandButton>
+		</h:form>
+	</h:body>
+</f:view>

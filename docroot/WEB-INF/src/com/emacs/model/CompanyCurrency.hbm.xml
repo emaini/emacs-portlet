@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<class name="com.emacs.model.CompanyCurrency" table="CompanyCurrency">
+		<id name="companyCurrencyId" type="long">
+			<generator class="increment" />
+		</id>
+	<property name="companyCurrencyId" />
+	<property name="noOfDecimalPlaces" />
+	<property name="noOfDecimalPlacesWords" />
+	<property name="showAmountsInMillions" />
+	<property name="spaceBetweenAmountNSymbol" />
+	<property name="symbolSuffixedToAmounts" />
+	<property name="formalName" />
+	<property name="symbolForDecimalPortion" />
+	<property name="symbol" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- MySQL -->
+
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/emacs?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+		<!-- Sessions and transactions -->
+
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Mappings -->
+
+		<mapping resource="com/emacs/model/Company.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

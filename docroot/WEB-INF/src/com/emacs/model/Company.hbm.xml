@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<class name="com.emacs.model.Company" table="Company">
+		<id name="companyId" type="long">
+			<generator class="increment" />
+		</id>
+		<one-to-one name="companyCurrencyId" entity-name="CompanyCurrency" foreign-key="companyCurrencyId" ></one-to-one>
+	<property name="companyCurrencyId" />
+	<property name="companyName" />
+	<property name="symbol" />
+	<property name="maintain" />
+	<property name="financialYearFrom" />
+	<property name="booksBeginFrom" />
+	<property name="mailingName" />
+	<property name="address" />
+	<property name="statutoryCompliance" />
+	<property name="state" />
+	<property name="pincode" />
+	<property name="telephoneNumber" />
+	<property name="mobileNumber" />
+	<property name="email" />
+	</class>
+</hibernate-mapping>
